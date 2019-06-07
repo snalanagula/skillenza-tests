@@ -1,0 +1,57 @@
+Search Engine Query
+You are given a list of search engine queries.
+
+The queries are in the form of strings and do not contain any whitespace.
+
+When you encounter the string “top <n>“, then output the top n search terms according to the popularity. Popularity is measured by the number of times a particular string appears in the list before the current occurrence of the word top. Note that those searches having the same popularity should be sorted lexicographically.
+
+Input Format
+The first line of input consists of an integer t. This is the number of test cases. 
+For each test case, the first line of input contains c, where n is the combined number of search queries and top strings. Then c lines follow.
+
+Output Format
+For each test case, output contains m lines where m is the number of times top appeared in the list.
+
+Each line of output contains at most n space separated strings ordered by popularity and ties broken lexicographically.
+
+Constraints
+1 <= < t <= 100 (This is the number of test cases)
+
+2 <= < c <= 10000 (This is the number of search query strings + top strings)
+
+1 <= n <= 1000 (Number appearing next to top)
+
+1 <= s <= 6 (This is the size of search strings)
+
+Query character set - a-z
+
+Sample Input
+2
+8
+jobs
+jobs
+videos
+cats
+videos
+cats
+videos
+top 3
+10
+videos
+songs
+songs
+top 1
+videos
+dogs
+jobs
+movies
+dogs
+top 7
+Sample Output
+videos cats jobs
+songs
+dogs songs videos jobs movies
+
+Note
+
+No case with start with a top and last string in each case will always be top.
